@@ -14,10 +14,12 @@ set(HEADERS_DIR
 set(SOURCES
         main.cpp
         ${SOURCES_DIR}/ipc_half_duplex.cpp
+        ${SOURCES_DIR}/ipc_fifo.cpp
         )
 
 set(HEADERS
         ${HEADERS_DIR}/ipc_half_duplex.h
+        ${HEADERS_DIR}/ipc_fifo.h
         )
 
 include_directories(
