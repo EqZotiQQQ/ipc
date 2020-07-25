@@ -3,6 +3,8 @@ project(ipc)
 
 set(CMAKE_CXX_STANDARD 20)
 
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
 set(SOURCES_DIR
         src
         )
@@ -28,3 +30,5 @@ include_directories(
 )
 
 add_executable(ipc ${SOURCES} ${HEADERS})
+
+target_link_libraries(ipc Threads::Threads)
