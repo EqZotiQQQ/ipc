@@ -7,6 +7,8 @@
 
 
 int ipcFifoCommunication();
+void ipcFifoClient(std::string fPath);
+void ipcFifoServer(std::string fPath, std::string msg);
 
 
 #endif //IPC_IPC_FIFO_H
