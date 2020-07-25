@@ -57,7 +57,7 @@ void ipcFifoClient(std::string fPath) {
     /*
      * its gonna be smarter if u will read file after it update
      * with smth like poll, epoll etc. Need to read about it.
-     * */
+     */
     while(1)
     {
         fp = fopen(fPath.c_str(), "r");
