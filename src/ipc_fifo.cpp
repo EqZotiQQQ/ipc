@@ -17,6 +17,8 @@
  * This might be not threads but separate processes.
  * I wanted to test it in single solution.
  * Maybe I will test it later.
+ *
+ * done.
  * */
 int ipcFifoCommunication() {
     int ret {0};
@@ -54,10 +56,7 @@ void ipcFifoClient(std::string fPath) {
     char readbuf[80];
     umask(0);
     mknod(fPath.c_str(), S_IFIFO|0666, 0);
-    /*
-     * its gonna be smarter if u will read file after it update
-     * with smth like poll, epoll etc. Need to read about it.
-     */
+
     while(1)
     {
         fp = fopen(fPath.c_str(), "r");
